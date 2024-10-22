@@ -1,0 +1,140 @@
+.cta {
+	& ul.cta--slides {
+		position: relative;
+		height: 100vh;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+
+		& li.cta--slide {
+			width: 100%;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+
+			& figure {
+				display: block;
+				position: relative;
+				width: 100%;
+				height: 100%;
+
+				& > img {
+					display: none;
+				}
+
+				& figcaption {
+					display: block;
+					position: relative;
+					height: 100%;
+
+					& .cta--slide__inner {
+						display: flex;
+						justify-content: center;
+						margin: 0;
+						width: auto;
+						height: 100vh;
+
+						& .cta--slide__inner_wrap {
+							display: flex;
+							width: auto;
+							height: 100%;
+							justify-content: flex-end;
+							align-items: flex-start;
+							flex-direction: column;
+
+							& span {
+								&:last-child {
+									margin-bottom: 10vh;
+								}
+							}
+
+							& .cta--slide__title {
+								display: inline-block;
+								color: #fff;
+								font-weight: 700;
+								font-family: 'Poppins', sans-serif;
+                text-align: left;
+                padding: 1.25rem 2rem 1.5rem 2rem;
+                margin: 0;
+                letter-spacing: -3px;
+                font-size: 56px;
+                line-height: 56px;
+							}
+
+							& .cta--slide__content {
+								display: inline-block;
+                padding: 1rem 2rem 1.25rem 2rem;
+								margin: 20px 0;
+                text-align: left;
+
+								& p {
+									margin: 0;
+									text-align: left;
+									color: #fff;
+                  font-family: 'Poppins', sans-serif;
+                  font-size: 1.25rem;
+                  line-height: 1.25rem;
+                  font-weight: 300;
+                  letter-spacing: normal;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 991px) {
+	.cta {
+		margin-top: 83px;
+
+		& ul.cta--slides {
+			height: auto;
+
+			& li.cta--slide {
+				height: auto !important;
+
+				& figure {
+					height: auto;
+
+					& > img {
+						height: 100vh;
+						position: absolute;
+					}
+
+					& figcaption {
+						height: auto;
+
+						& .cta--slide__inner {
+							height: auto;
+							position: relative;
+
+							& .cta--slide__inner_wrap {
+								height: auto;
+
+								& .cta--slide__title {
+									padding: 16px 28px;
+									font-size: 40px;
+									line-height: 40px;
+								}
+								& .cta--slide__content {
+									margin: 0px 10% 20px 10%;
+
+									& p {
+										font-size: 14px;
+										line-height: 20px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

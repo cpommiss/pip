@@ -1,0 +1,60 @@
+.fragment {
+  position: relative;
+
+  & > header {
+    padding: 0;
+    color: #fff;
+    width: auto;
+    background-color: transparent;
+    position: relative;
+
+    /*
+    &:after {
+      display: block;
+      position: absolute;
+      z-index: 20;
+      bottom: -3px;
+      left: -500%;
+      width: 1000%;
+      height: 2px;
+      background-color: $brand-primary;
+      -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
+      content: '';
+    }
+    */
+
+    & h1,
+    & h2 {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      letter-spacing: normal;
+    }
+
+    & h1 {
+      color: #fff;
+      font-size: 56px;
+      line-height: 56px;
+      display: block;
+      position: relative;
+      z-index: 99;
+      background-color: $brand-primary;
+      padding: 1rem 0 1.5rem;
+      letter-spacing: -3px;
+    }
+
+    & h2 {
+      font-size: 24px;
+      line-height: 24px;
+      color: #aaa;
+    }
+  }
+
+  & > section {
+    padding: 60px 0 45px 0;
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+}

@@ -1,0 +1,312 @@
+body {
+  & > header {
+    position: fixed;
+    width: 100%;
+    height: 125px;
+    z-index: 20;
+    background-color: #fff;
+
+    &:after {
+      display: block;
+      position: absolute;
+      z-index: 20;
+      bottom: -5px;
+      left: -500%;
+      width: 1000%;
+      height: 5px;
+      background-color: $brand-primary;
+      @include box-shadow(0px 3px 5px rgba(0, 0, 0, 0.25));
+      content: '';
+    }
+
+    & a.brand {
+      display: block;
+      position: absolute;
+      width: 250px;
+      height: 120px;
+      margin-top: 0;
+      top: 50%;
+      left: auto;
+      transform: translateY(-50%);
+      background-image: url(../images/logo.png);
+      background-repeat: no-repeat;
+      background-position: center left;
+      background-size: auto 90%;
+      font-size: 0;
+      line-height: 0;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    @at-root {
+      @media screen and (max-width: 991px) {
+        body {
+          & > header {
+            height: auto;
+
+            & a.brand {
+              height: 75px;
+
+              &:before {
+                font-size: 1.5rem;
+                line-height: 1.25rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & nav {
+      float: right;
+
+      & > ul {
+        @media screen and (max-width: 991px) {
+          padding-top: 5px;
+          padding-bottom: 5px;
+        }
+
+        & > li {
+          display: flex !important;
+          float: left;
+          width: auto;
+          justify-content: center;
+          align-items: center;
+          height: 125px;
+          padding: 0 !important;
+          margin: 0 !important;
+
+          @media screen and (max-width: 991px) {
+            height: 60px;
+          }
+
+          & > a {
+            display: flex !important;
+            height: 100%;
+            align-items: center;
+            font-weight: bold;
+            padding: 0 1rem 0 1rem !important;
+            margin: 0 !important;
+            font-size: 24px;
+            line-height: 24px;
+            color: $brand-primary;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: -2px;
+
+            @media screen and (max-width: 991px) {
+              width: 100%;
+            }
+
+            &:hover,
+            &:focus {
+              background-color: $brand-primary !important;
+              color: #fff !important;
+              border: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    @at-root {
+      @media screen and (max-width: 1200px) {
+        body {
+          & > header {
+            & nav {
+              & > ul {
+                & > li {
+                  & > a {
+                    padding: 0px 15px !important;
+                    font-size: 18px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      @media screen and (max-width: 991px) {
+        body {
+          & > header {
+            & nav {
+              display: none;
+              height: auto;
+              width: 100%;
+              clear: both;
+              float: none;
+              border-top: 1px $brand-primary dashed;
+
+              & > ul {
+                display: block;
+                clear: both;
+                width: 100%;
+                float: none;
+
+                & > li {
+                  float: none;
+
+                  & > a {
+                    padding: 20px 0 !important;
+                    line-height: 18px;
+                    text-align: center;
+                  }
+                }
+              }
+            }
+
+            &.open {
+              & nav {
+                display: block;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & a.toggle {
+      display: none;
+      float: right;
+      width: 48px;
+      height: 48px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      margin-left: 15px;
+      background-color: transparent;
+      border: 1px $brand-primary solid;
+      line-height: 50px;
+      font-size: 34px;
+      text-align: center;
+      color: $brand-primary;
+      text-decoration: none;
+
+      &:hover,
+      &:active {
+        background-color: $brand-primary;
+        color: #fff;
+      }
+    }
+
+    @at-root {
+      @media screen and (max-width: 991px) {
+        body {
+          & > header {
+            & a.toggle {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    & .addendum {
+      display: block;
+      float: right;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      & > aside.widget {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        margin: 0 10px;
+        padding: 20px 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        & .so-widget-sow-editor {
+          padding: 10px;
+          background-color: $brand-primary;
+          text-align: center;
+          font-size: 13px;
+          line-height: 13px;
+          color: #fff;
+
+          & > h3 {
+            display: none;
+          }
+
+          & h1,
+          & h2,
+          & h3,
+          & h4,
+          & h5,
+          & h6 {
+            font-size: 18px;
+            line-height: 18px;
+          }
+
+          & a {
+            color: #fff;
+            text-decoration: underline;
+
+            &:hover {
+              color: #fff;
+              text-decoration: none;
+            }
+          }
+
+          & p {
+            font-size: 13px;
+            line-height: 13px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+
+    & > aside.site-banner {
+      position: relative;
+      background-color: $brand-primary;
+      color: #fff;
+      padding: 1rem;
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.125rem;
+        margin: 0;
+
+        a {
+          color: #fff;
+          text-decoration: none;
+
+          &:after {
+            content: '\2192';
+            padding-left: 0.5rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @at-root {
+      @media screen and (max-width: 991px) {
+        body {
+          & > header {
+            & .addendum {
+              padding-top: 0;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+      @media screen and (max-width: 640px) {
+        body {
+          & > header {
+            & .addendum {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

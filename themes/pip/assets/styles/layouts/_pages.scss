@@ -1,0 +1,21 @@
+body.home {
+	& .main {
+		& > .page-header {
+			display: none;
+		}
+
+		.widget-title {
+			font-family: 'Poppins', sans-serif;
+			font-size: 48px;
+			line-height: 48px;
+			text-align: center;
+      font-weight: 700;
+			padding: 0 0 35px 0;
+		}
+	}
+}
+
+.main .content,
+.main .textwidget {
+	@include common-styles;
+}

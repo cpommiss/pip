@@ -1,0 +1,73 @@
+.so-widget-sow-simple-masonry {
+    .sow-masonry-grid-item {
+        position: relative;
+        background-color: #fff;
+
+        &:before {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            content: '';
+            border: 5px $brand-secondary solid;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        &-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+
+            & a {
+                display: block;
+                max-width: 100%;
+                position: relative;
+                text-decoration: none;
+
+                &:before {
+                    display: block;
+                    position: absolute;
+                    content: attr(data-title);
+                    width: 100%;
+                    font-size: 0.875rem;
+                    line-height: 0.875rem;
+                    color: #fff;
+                    background-color: rgba(red($brand-secondary), green($brand-secondary), blue($brand-secondary), 0.8);
+                    text-align: center;
+                    padding: 1rem 0;
+                    pointer-events: none;
+                }
+
+                img {
+                    width: auto;
+                    height: auto;
+                    margin: 0 auto;
+                }
+            }
+        }
+
+        &-download {
+            text-decoration: underline;
+            display: block;
+            height: 34px;
+            position: absolute;
+            z-index: 20;
+            bottom: 0;
+            color: #fff;
+            background-color: rgba(red($brand-secondary), green($brand-secondary), blue($brand-secondary), 0.8);
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            line-height: 34px;
+            letter-spacing: 1px;
+            transition: all 0.25s ease-out;
+
+            &:hover {
+                text-decoration: none;
+                background-color: $brand-secondary;
+            }
+        }
+    }
+}
